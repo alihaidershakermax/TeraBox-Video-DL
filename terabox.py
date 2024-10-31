@@ -8,14 +8,14 @@ from threading import Thread
 import pymongo
 
 # DB Connetion
-mongo_client = pymongo.MongoClient(os.getenv('MONGO_URI'))
+mongo_client = pymongo.MongoClient(os.getenv('mongodb://mongo:e367a9cRudX2l1Kf4VqP58UFTtANH0zn@fra1.clusters.zeabur.com:30195'))
 db = mongo_client['powerful_web_scraping_tool_bot']
 users_collection = db['users']
 banned_users_collection = db['banned_users']
 print('DB Connected')
 
 # Bot Connetion
-bot = telebot.TeleBot(os.getenv('BOT_TOKEN'))
+bot = telebot.TeleBot(os.getenv('8183068985:AAEwJeOsUeEYehTnHq-g8TND3X5ErPutQyw'))
 print(f"@{bot.get_me().username} Connected")
 print("\n╭─── [ LOG ]")
 app = Flask(__name__)
